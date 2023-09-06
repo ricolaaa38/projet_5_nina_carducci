@@ -119,6 +119,9 @@
         .attr("src", element.attr("src"));
       $(`#${lightboxId}`).modal("toggle");
     },
+
+// function gallery preview image
+
     prevImage() {
       let activeImage = null;
       $("img.gallery-item").each(function() {
@@ -154,10 +157,13 @@
         }
       });
       next =
-        imagesCollection[index] ||
+        imagesCollection[index-1] ||
         imagesCollection[imagesCollection.length - 1];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
+
+// function gallery next image
+
     nextImage() {
       let activeImage = null;
       $("img.gallery-item").each(function() {
@@ -192,9 +198,11 @@
           index = i;
         }
       });
-      next = imagesCollection[index] || imagesCollection[0];
+      next = imagesCollection[index+1] || imagesCollection[0];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
+
+
     createLightBox(gallery, lightboxId, navigation) {
       gallery.append(`<div class="modal fade" id="${
         lightboxId ? lightboxId : "galleryLightbox"
@@ -218,6 +226,9 @@
                 </div>
             </div>`);
     },
+
+    // functions for filter Galery items
+
     showItemTags(gallery, position, tags) {
       var tagItems =
         '<li class="nav-item"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';
