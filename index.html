@@ -25,12 +25,11 @@
     <script src="./assets/scripts.js"></script>
 
 
-</script>
-
   </head>
   <body>
+    <div itemscope itemtype="https://schema.org/LocalBusiness">
     <header>
-      <h1 class="name">Nina Carducci</h1>
+      <h1 itemprop="name" class="name">Nina Carducci</h1>
       <div class="nav">
         <ul>
           <li><a href="#about">À propos</a></li>
@@ -122,7 +121,7 @@
       </section>
       <section id="about">
         <div class="picture left">
-          <img
+          <img itemprop="image"
             src="./assets/images/nina.jpg"
             alt="portrait de la photographe nina carducci"
           />
@@ -314,9 +313,6 @@
         </div>
       </div>
 
-      <div itemscope itemtype="https://schema.org/LocalBusiness">
-      <span itemprop="name">Nina Carducci</span>
-      <img itemprop="image" src="./assets/images/nina.jpg" alt="portrait de la photographe nina carducci"></img>
       <div itemprop="adress" itemscope itemtype="https://schema.org/PostalAddress">
         <span itemprop=”streetAddress”>68 avenue alsace lorraine,</span> 
         <span itemprop=”addressRegion”> Bordeaux</span>
@@ -324,10 +320,11 @@
       </div>
         <span itemprop="openingHours" content="Mo, Tu, We, Th, Fr  10:00-19:00">Du lundi au vendredi de 10h à 19h :</span>
         <span itemprop="telephone" content="+33556677889">au 05 56 67 78 89</span>
-      </div>
-      </div>
+      
+      
 
     </section>	
 	</footer>
+  </div>
   </body>
 </html>
