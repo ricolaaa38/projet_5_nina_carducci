@@ -4,7 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nina Carducci Photographe | Bordeaux et Île de France</title>
-	<meta name="description" content="Pour photographier et capturer vos moments les plus précieux, en garder un souvenir impérissable. Je me déplace sur Bordeaux et en Île-de-France pour réaliser vos photos, shooting, mariages, seminaires d'entreprises ..."/>
+	  <meta name="description" content="Pour photographier et capturer vos moments les plus précieux, en garder un souvenir impérissable. Je me déplace sur Bordeaux et en Île-de-France pour réaliser vos photos, shooting, mariages, seminaires d'entreprises ..."/>
+    <!-- open graph pour facebook -->
+    <meta property="og:title" content="Nina Carducci"/>
+    <meta property="og:url" content="https://nina-carducci.github.io/"/>
+    <meta property="og:image" content="https://ricolaaa38.github.io/projet_5_nina_carducci/assets/images/nina.jpg"/>
+    <meta property="og:description" content="Nina Carducci, photographe sur Bordeaux et me déplace en Île-de-France pour vos projets"/>
+    <meta property="og:type" content="website"/>
+    <!-- balise meta twitter cards -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@ninacarducci"/>
+    <meta name="twitter:creator" content="@ninacarducci"/>
+
     <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/style.min.css" />
@@ -25,12 +36,11 @@
     <script src="./assets/scripts.js"></script>
 
 
-</script>
-
   </head>
   <body>
+    <div itemscope itemtype="https://schema.org/LocalBusiness">
     <header>
-      <h1 class="name">Nina Carducci</h1>
+      <h1 itemprop="name" class="name">Nina Carducci</h1>
       <div class="nav">
         <ul>
           <li><a href="#about">À propos</a></li>
@@ -122,7 +132,7 @@
       </section>
       <section id="about">
         <div class="picture left">
-          <img
+          <img itemprop="image"
             src="./assets/images/nina.jpg"
             alt="portrait de la photographe nina carducci"
           />
@@ -305,6 +315,18 @@
             ></textarea>
             <input type="submit" value="Envoyer" />
           </form>
+          <p>Ou par téléphone 
+            <span itemprop="openingHours" content="Mo, Tu, We, Th, Fr  10:00-19:00">du lundi au vendredi de 10h à 19h au : </span>
+            <span itemprop="telephone" content="+33556677889"><strong>05 56 67 78 89</strong></span>
+          </p>
+          <p>Vous pouvez aussi me retrouver au : 
+            <div itemprop="adress" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop=”streetAddress”>68 avenue alsace lorraine,</span> 
+            <span itemprop=”postalCode”>33200</span>
+            <span itemprop=”addressRegion”> Bordeaux</span>
+            </div>
+          </p>    
+          
         </div>
         <div class="picture right">
           <img
@@ -313,21 +335,8 @@
           />
         </div>
       </div>
-
-      <div itemscope itemtype="https://schema.org/LocalBusiness">
-      <span itemprop="name">Nina Carducci</span>
-      <img itemprop="image" src="./assets/images/nina.jpg" alt="portrait de la photographe nina carducci"></img>
-      <div itemprop="adress" itemscope itemtype="https://schema.org/PostalAddress">
-        <span itemprop=”streetAddress”>68 avenue alsace lorraine,</span> 
-        <span itemprop=”addressRegion”> Bordeaux</span>
-        <span itemprop=”postalCode”>33200</span>  
-      </div>
-        <span itemprop="openingHours" content="Mo, Tu, We, Th, Fr  10:00-19:00">Du lundi au vendredi de 10h à 19h :</span>
-        <span itemprop="telephone" content="+33556677889">au 05 56 67 78 89</span>
-      </div>
-      </div>
-
     </section>	
 	</footer>
+  </div>
   </body>
 </html>
